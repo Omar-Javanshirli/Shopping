@@ -9,6 +9,6 @@ namespace Shopping.Core.Services
 {
     public interface IUserService
     {
-        Task<UserViewModel> GetUser();
+        Task<UserViewModel> GetUserAsync();
     }
 }

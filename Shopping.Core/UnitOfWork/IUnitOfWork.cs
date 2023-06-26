@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shopping.Core.UnityOfWork
+﻿namespace Shopping.Core.UnityOfWork
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
+        Task CommmitAsync();
+        void Commit();
     }
 }

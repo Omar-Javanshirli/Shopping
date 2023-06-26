@@ -6,10 +6,10 @@ namespace Shopping.Core.Services
 {
     public interface IAuthenticationService
     {
-        Task<TokenResponse> GetAccessTokenByRefreshToken();
-        Task RevokeRefreshToken();
-        Task GetTokenByClient();
-        Task GeTRefreshToken();
-        Task<Response<bool>> SignIn(SignInInput signInInput);
+        Task<TokenResponse> GetAccessTokenByRefreshTokenAsync();
+        Task RevokeRefreshTokenAsync();
+        Task<string> GetTokenByClientAsync();
+        Task GeTRefreshTokenAsync();
+        Task<Response<bool>> SignInAsync(SignInInput signInInput);
     }
 }

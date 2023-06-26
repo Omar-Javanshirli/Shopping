@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Shopping.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,11 +33,9 @@ namespace Shopping.Data.Repositories
         public async Task<Tentity> GetByIdAsync(int id)
         {
             var entity = await _dbSet.FindAsync(id);
-            // EntityState.Detached yapısını service class'sını anlatırken detaylandıracağım.
+
             if (entity != null)
-            {
                 _context.Entry(entity).State = EntityState.Detached;
-            }
 
             return entity;
         }

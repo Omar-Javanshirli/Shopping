@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace Shopping.Core.Services
 {
-    public interface IServiceGeneric<TEntity, TDto> where TEntity : class where TDto : class
+    public interface IGenericService<TEntity, TDto> where TEntity : class where TDto : class
     {
         Task<Response<TDto>> GetByIdAsync(int id);
 
@@ -13,8 +13,8 @@ namespace Shopping.Core.Services
 
         Task<Response<TDto>> AddAsync(TDto entity);
 
-        Task<Response<NoContent>> Remove(int id);
+        Task<Response<NoContent>> RemoveAsync(int id);
 
-        Task<Response<NoContent>> Update(TDto entity, int id);
+        Task<Response<NoContent>> UpdateAsync(TDto entity, int id);
     }
 }
