@@ -1,6 +1,7 @@
 ﻿using IdentityModel.Client;
 using SharedLibrary.Dtos;
 using Shopping.Core.Models;
+using System.Threading.Tasks;
 
 namespace Shopping.Core.Services
 {

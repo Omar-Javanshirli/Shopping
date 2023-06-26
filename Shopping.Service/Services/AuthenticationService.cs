@@ -7,10 +7,13 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using SharedLibrary.Dtos;
 using Shopping.Core.Models;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Shopping.Service.Services
 {
@@ -45,7 +48,7 @@ namespace Shopping.Service.Services
             var refreshToken = await this.httpContextAccessor.HttpContext.GetTokenAsync
                 (OpenIdConnectParameterNames.RefreshToken);
 
-            RefreshTokenRequest refreshTokenRequest = new()
+            RefreshTokenRequest refreshTokenRequest = new RefreshTokenRequest()
             {
                 ClientId = this.clientSettings.WebClientForUser.ClientId,
                 ClientSecret = this.clientSettings.WebClientForUser.ClientSecret,
@@ -89,7 +92,7 @@ namespace Shopping.Service.Services
             var refreshToken = await this.httpContextAccessor.HttpContext.GetTokenAsync
             (OpenIdConnectParameterNames.RefreshToken);
 
-            RefreshTokenRequest refreshTokenRequest = new()
+            RefreshTokenRequest refreshTokenRequest = new RefreshTokenRequest()
             {
                 ClientId = this.clientSettings.WebClientForUser.ClientId,
                 ClientSecret = this.clientSettings.WebClientForUser.ClientSecret,
@@ -144,7 +147,7 @@ namespace Shopping.Service.Services
 
             var newToken = await this.httpClient.RequestClientCredentialsTokenAsync(clientCredentialTokenRequest);
 
-            if (newToken.IsError) 
+            if (newToken.IsError)
                 throw newToken.Exception;
 
             await this.clientAccessTokenCache.SetAsync
@@ -166,7 +169,7 @@ namespace Shopping.Service.Services
             var refreshToken = await this.httpContextAccessor.HttpContext.GetTokenAsync
                 (OpenIdConnectParameterNames.RefreshToken);
 
-            TokenRevocationRequest tokenRevocationRequest = new()
+            TokenRevocationRequest tokenRevocationRequest = new TokenRevocationRequest()
             {
                 ClientId = this.clientSettings.WebClientForUser.ClientId,
                 ClientSecret = this.clientSettings.WebClientForUser.ClientSecret,

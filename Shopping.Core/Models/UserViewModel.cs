@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace Shopping.Core.Models
 {
     public class UserViewModel

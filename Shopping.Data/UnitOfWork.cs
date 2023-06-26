@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Shopping.Core.UnityOfWork;
+using System.Threading.Tasks;
 
 namespace Shopping.Data
 {
