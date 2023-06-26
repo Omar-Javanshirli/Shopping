@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Core", "Shopping.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Service", "Shopping.Service\Shopping.Service.csproj", "{4B882822-007C-4ECC-9A13-ED0D29A1FCF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHopping.Data", "SHopping.Data\SHopping.Data.csproj", "{88C20A4D-CF4C-44AA-807D-3E2F1FDAF833}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Data", "Shopping.Data\Shopping.Data.csproj", "{F41A6D6E-5D97-43A9-A18E-93809D85E7C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,10 +52,10 @@ Global
 		{4B882822-007C-4ECC-9A13-ED0D29A1FCF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B882822-007C-4ECC-9A13-ED0D29A1FCF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B882822-007C-4ECC-9A13-ED0D29A1FCF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88C20A4D-CF4C-44AA-807D-3E2F1FDAF833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88C20A4D-CF4C-44AA-807D-3E2F1FDAF833}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88C20A4D-CF4C-44AA-807D-3E2F1FDAF833}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88C20A4D-CF4C-44AA-807D-3E2F1FDAF833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F41A6D6E-5D97-43A9-A18E-93809D85E7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F41A6D6E-5D97-43A9-A18E-93809D85E7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F41A6D6E-5D97-43A9-A18E-93809D85E7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F41A6D6E-5D97-43A9-A18E-93809D85E7C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

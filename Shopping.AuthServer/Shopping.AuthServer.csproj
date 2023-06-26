@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
+    <ProjectReference Include="..\Shopping.Core\Shopping.Core.csproj" />
     <ProjectReference Include="..\Shopping.Service\Shopping.Service.csproj" />
   </ItemGroup>
 </Project>

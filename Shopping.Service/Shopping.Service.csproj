@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SharedLibrary\SharedLibrary.csproj" />
-    <ProjectReference Include="..\SHopping.Data\SHopping.Data.csproj" />
+    <ProjectReference Include="..\Shopping.Data\Shopping.Data.csproj" />
   </ItemGroup>
 
 </Project>

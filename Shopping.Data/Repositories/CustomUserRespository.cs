@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Shopping.Data.Repositories
 {
-    internal class CustomUserRespository : ICustomUserRepository
+    internal class CustomUserRespository:ICustomUserRepository
     {
         private readonly AppDbContext _context;
 
