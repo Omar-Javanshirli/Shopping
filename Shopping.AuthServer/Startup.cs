@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shopping.AuthServer.Services;
 using Shopping.Core.Models;
+using Shopping.Data;
 
 namespace Shopping.AuthServer
 {
@@ -32,12 +33,17 @@ namespace Shopping.AuthServer
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+          services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly("Shopping.Data");
+                });
+            });
 
             var builder = services.AddIdentityServer(options =>
             {
