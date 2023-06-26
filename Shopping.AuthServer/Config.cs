@@ -13,14 +13,14 @@ namespace Shopping.AuthServer
     {
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
-            new ApiResource("Api_1_Catalog"){Scopes={"Api_1_fullpermission"}},
+            new ApiResource("Api_1_Catalog"){Scopes={"shopping_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
         public static IEnumerable<ApiScope> ApiScopes =>
           new ApiScope[]
           {
-                new ApiScope("Api_1_fullpermission","Catalog API için full erişim"),
+                new ApiScope("shopping_fullpermission","Shopping API için full erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
           };
 
@@ -45,7 +45,7 @@ namespace Shopping.AuthServer
                     AllowedGrantTypes= GrantTypes.ResourceOwnerPassword,
                     AllowedScopes=
                     {
-                        "Api_1_fullpermission",
+                        "shopping_fullpermission",
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,

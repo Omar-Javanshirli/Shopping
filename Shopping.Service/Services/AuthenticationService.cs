@@ -144,7 +144,7 @@ namespace Shopping.Service.Services
 
             var newToken = await this.httpClient.RequestClientCredentialsTokenAsync(clientCredentialTokenRequest);
 
-            if (newToken.IsError)
+            if (newToken.IsError) 
                 throw newToken.Exception;
 
             await this.clientAccessTokenCache.SetAsync
