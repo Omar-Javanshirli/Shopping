@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Shopping.AuthServer.Models;
+using Shopping.Core.Models;
 
 namespace Shopping.AuthServer.Data
 {
