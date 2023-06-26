@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharedLibrary.Models
+namespace Shopping.Core.UnityOfWork
 {
-    internal class UserViewModel
+    internal interface IUnitOfWork
     {
     }
 }

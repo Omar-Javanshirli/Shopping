@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shopping.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Shopping.Core.Services
 {
     public interface IUserService
     {
-        Task<>
+        Task<UserViewModel> GetUser();
     }
 }

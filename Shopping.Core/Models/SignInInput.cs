@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace SharedLibrary.Models
+namespace Shopping.Core.Models
 {
     public class SignInInput
     {
