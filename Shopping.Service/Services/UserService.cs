@@ -1,4 +1,4 @@
-﻿using Shopping.Core.Models;
+﻿using Shopping.Core.Models.JWTDbModels;
 using Shopping.Core.Services;
 using System.Net.Http;
 using System.Net.Http.Json;

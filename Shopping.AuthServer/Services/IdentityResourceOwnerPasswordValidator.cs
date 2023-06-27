@@ -2,7 +2,7 @@
 using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Identity;
 using Shopping.AuthServer.Models;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

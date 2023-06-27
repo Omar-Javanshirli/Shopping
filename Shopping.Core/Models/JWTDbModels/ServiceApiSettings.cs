@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shopping.Core.Models
+namespace Shopping.Core.Models.JWTDbModels
 {
     public class ServiceApiSettings
     {

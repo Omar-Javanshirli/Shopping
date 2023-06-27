@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Shopping.Core.Models
+namespace Shopping.Core.Models.JWTDbModels
 {
     public class SignInInput
     {

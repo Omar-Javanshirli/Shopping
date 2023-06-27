@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using SharedLibrary.Dtos;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

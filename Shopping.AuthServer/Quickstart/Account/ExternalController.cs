@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 
 namespace IdentityServerHost.Quickstart.UI
 {

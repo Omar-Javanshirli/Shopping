@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 
 namespace Shopping.Data
 {

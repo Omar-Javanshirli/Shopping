@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shopping.AuthServer.Services;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 using Shopping.Core.Repositories;
 using Shopping.Data;
 
@@ -26,6 +26,7 @@ namespace Shopping.AuthServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalApiAuthentication();
             services.AddControllersWithViews();
 
             services.AddIdentity<ApplicationUser, IdentityRole>()

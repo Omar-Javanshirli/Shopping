@@ -2,7 +2,7 @@
 using Shopping.Core.UnityOfWork;
 using System.Threading.Tasks;
 
-namespace Shopping.Data
+namespace Shopping.Data.UnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {

@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace Shopping.Core.Models
+namespace Shopping.Core.Models.JWTDbModels
 {
     public class UserViewModel
     {

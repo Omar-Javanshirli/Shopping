@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 using Shopping.Core.Repositories;
 using System.Threading.Tasks;
 

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Configuration;
-using Shopping.Core.Models;
+using Shopping.Core.Models.JWTDbModels;
 using Shopping.Core.Services;
 using Shopping.MVC_Client.Handler;
 using Shopping.Service.Services;
@@ -26,10 +26,12 @@ builder.Services.AddScoped<IApiResourceHttpClient, ApiResourceHttpClient>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opts =>
 {
-    opts.LoginPath = "/Auth/SignIn";
+    opts.LoginPath = new PathString("/Auth/Signin");
+    opts.LogoutPath = new PathString("/Member/logout");
+    opts.AccessDeniedPath = new PathString("/Member/AccessDenied");
     opts.ExpireTimeSpan = TimeSpan.FromDays(60);
+    //istifadeci 60 gun erzinde giris elese cookie-nin omru 60 gun uzancax "opt.SlidingExpiration" ture elediyimiz zaman.
     opts.SlidingExpiration = true;
-    opts.Cookie.Name = "webcookie";
 });
 
 var app = builder.Build();

@@ -1,4 +1,4 @@
-﻿using Shopping.Core.Models;
+﻿using Shopping.Core.Models.JWTDbModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
