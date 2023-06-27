@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Shopping.AuthServer.Models;
 using Shopping.Core.Models;
 
-namespace Shopping.AuthServer.Data
+namespace Shopping.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -12,12 +11,16 @@ namespace Shopping.AuthServer.Data
         {
         }
 
+        public DbSet<CustomUser> customUsers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<CustomUser>().HasData
+            (
+                 new CustomUser() { Id = 1, Email = "omer@gmail.com", Password = "password", City = "Baki", UserName = "omer" },
+                 new CustomUser() { Id = 2, Email = "amin@gmail.com", Password = "password", City = "Gence", UserName = "amin" }
+            );
             base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
         }
     }
 }

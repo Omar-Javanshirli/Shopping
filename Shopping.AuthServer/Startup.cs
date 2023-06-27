@@ -1,5 +1,4 @@
 ﻿using IdentityServer4;
-using Shopping.AuthServer.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shopping.AuthServer.Services;
 using Shopping.Core.Models;
+using Shopping.Core.Repositories;
 using Shopping.Data;
 
 namespace Shopping.AuthServer
@@ -32,7 +32,7 @@ namespace Shopping.AuthServer
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-          services.AddDbContext<AppDbContext>(options =>
+          services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
                 {
@@ -57,7 +57,9 @@ namespace Shopping.AuthServer
             builder.AddInMemoryClients(Config.Clients);
             builder.AddAspNetIdentity<ApplicationUser>();
             builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>();
-            builder.AddProfileService<CustomProfileService>();
+
+            services.AddScoped<ICustomUserRepository, Shopping.Data.Repositories.CustomUserRespository>();
+            services.AddScoped<CustomProfileService>();
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Shopping.Data.Repositories
 {
-    internal class CustomUserRespository:ICustomUserRepository
+    public class CustomUserRespository:ICustomUserRepository
     {
-        private readonly AppDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public CustomUserRespository(AppDbContext context)
+        public CustomUserRespository(ApplicationDbContext context)
         {
             _context = context;
         }

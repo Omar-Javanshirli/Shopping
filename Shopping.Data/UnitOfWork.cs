@@ -8,7 +8,7 @@ namespace Shopping.Data
     {
         private readonly DbContext _context;
 
-        public UnitOfWork(AppDbContext appDbContext)
+        public UnitOfWork(ApplicationDbContext appDbContext)
         {
             _context = appDbContext;
         }

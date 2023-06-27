@@ -14,7 +14,7 @@ namespace Shopping.Data.Repositories
         private readonly DbContext _context;
         private readonly DbSet<Tentity> _dbSet;
 
-        public GenericRepository(AppDbContext context)
+        public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
             _dbSet = context.Set<Tentity>();
