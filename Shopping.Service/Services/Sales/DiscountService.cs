@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shopping.Data.Repositories
+namespace Shopping.Service.Services.Sales
 {
-    internal class DiscountRepository
+    internal class DiscountService
     {
     }
 }
