@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Shopping.Core.Models.SalesDbModels
 {
-    public class Product:BaseModel
+    public class Product : BaseModel
     {
-        public string? Name { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public Guid DiscountId { get; set; }

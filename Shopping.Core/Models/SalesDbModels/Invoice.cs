@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shopping.Core.Models.SalesDbModels
 {
-    public class Invoice:BaseModel 
+    public class Invoice : BaseModel
     {
         public decimal TotalAmount { get; set; }
         public Guid CashierId { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Shopping.Core.Models.SalesDbModels
 {
-    public class InovoiceProduct:BaseModel
+    public class InvoiceProduct : BaseModel
     {
         public Guid InvoiceId { get; set; }
         public Guid ProductId { get; set; }
